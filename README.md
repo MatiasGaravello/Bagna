@@ -1,2 +1,0 @@
-# Bagna
-Curso React JS
