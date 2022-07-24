@@ -1,0 +1,8 @@
+.Navbar {
+    background-color: bisque;
+}
+
+.Navbar div {
+    display: flex;
+    justify-content: center;
+} 
