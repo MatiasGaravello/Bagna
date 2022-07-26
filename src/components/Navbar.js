@@ -4,7 +4,7 @@ const Navbar = ()=>{
  return(
     <nav className="Navbar">
         <div>
-            <h1>BAGNA</h1>
+            <img src='images/logo-flyer.png'/>
         </div>
         <div>
             <button>Carteras</button>
