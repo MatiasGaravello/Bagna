@@ -1,8 +1,14 @@
 .Navbar {
-    background-color: #d9beb4;
+    max-width: 1366px;
+    
 }
 
-.Navbar div {
+/* .Navbar div {
     display: flex;
     justify-content: center;
-} 
+}  */
+
+.Navbar button {
+    background-color: transparent;
+    letter-spacing: 2px;
+}
