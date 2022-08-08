@@ -1,6 +1,6 @@
 const products = [
     {
-        idProducto: 100,
+        idProducto: '100',
         nombre: "Mini-pocket",
         precio: 2000,
         hasTalle: false,
@@ -10,7 +10,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 101,
+        idProducto: '101',
         nombre: "Cartera Total Black",
         precio: 4200,
         hasTalle: true,
@@ -20,7 +20,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 102,
+        idProducto: '102',
         nombre: "Bandolera negra con cadena",
         precio: 3000,
         hasTalle: true,
@@ -30,7 +30,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 103,
+        idProducto: '103',
         nombre: "Bolso Blanco",
         precio: 5000,
         hasTalle: true,
@@ -40,7 +40,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 104,
+        idProducto: '104',
         nombre: "Bolso de viaje XXL",
         precio: 5200,
         hasTalle: true,
@@ -51,7 +51,7 @@ const products = [
         descripcion: "En esta ocasión combinamos Charol Negro con Nude Mate y le dimos brillo con nuestro Glitter multicolor en las correas. Que les parece?"
     },
     {
-        idProducto: 105,
+        idProducto: '105',
         nombre: "Mochila beige",
         precio: 4500,
         hasTalle: true,
@@ -61,7 +61,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 106,
+        idProducto: '106',
         nombre: "Mochila Croco Negro",
         precio: 4700,
         hasTalle: true,
@@ -71,7 +71,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 107,
+        idProducto: '107',
         nombre: "Riñonera Negra",
         precio: 3000,
         hasTalle: false,
@@ -81,7 +81,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 108,
+        idProducto: '108',
         nombre: "Portanotebook con manija",
         precio: 3400,
         hasTalle: true,
@@ -91,7 +91,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 109,
+        idProducto: '109',
         nombre: "Mochila Negra",
         precio: 4000,
         hasTalle: true,
@@ -101,7 +101,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 110,
+        idProducto: '110',
         nombre: "Mochila Silver Metalizado",
         precio: 4500,
         hasTalle: true,
@@ -111,7 +111,7 @@ const products = [
         descripcion: ""
     },
     {
-        idProducto: 111,
+        idProducto: '111',
         nombre: "Mini Bag Riñonera 2 en 1",
         precio: 4000,
         hasTalle: true,
@@ -124,7 +124,7 @@ const products = [
         descripcion: "Si así es, cambiándole la posición de la correa la podes usar como Riñonera o solo como Bandolera. Vos elegí la opción que más te guste según tu outfit."
     },
     {
-        idProducto: 112,
+        idProducto: '112',
         nombre: "Clutch Negro",
         precio: 3000,
         hasTalle: false,
@@ -140,5 +140,14 @@ export const getProducts = () => {
         setTimeout(() => {
             resolve(products)
         }, 3000)
+    })
+}
+
+
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.idProducto === id))
+        }, 500)
     })
 }
