@@ -5,9 +5,10 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
+    const { productId } = useParams()
 
     useEffect(() => {
-        getProductById('104').then(response => {
+        getProductById(productId).then(response => {
             setProduct(response)
         }).catch(error => {
             console.log(error)

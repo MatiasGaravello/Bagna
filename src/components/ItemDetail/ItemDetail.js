@@ -14,17 +14,17 @@ const ItemDetail = (product) => {
                         <p className="card-text">{product.descripcion}</p>
                         <div id="seccionTalle" className="form-floating">
                             <select className="form-select" id="selectTalle" aria-label="Floating label select example">
-                                <option value="" selected>Seleccione un talle</option>
+                                <option value="">Seleccione un talle</option>
                                 <option value="s">S</option>
                                 <option value="m">M</option>
                                 <option value="l">L</option>
                             </select>
-                            <label className='text-start' for="selectTalle">Talle</label>
+                            <label className='text-start'>Talle</label>
                         </div>
                         <div className="form-floating my-4">
                             <select className="form-select" id="selectCantidad"
                                 aria-label="Floating label select example">
-                                <option value="1" selected>1</option>
+                                <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -32,7 +32,7 @@ const ItemDetail = (product) => {
                                 <option value="6">6</option>
                                 <option value="7">7</option>
                             </select>
-                            <label className='text-start' for="selectCantidad">Cantidad</label>
+                            <label className='text-start'>Cantidad</label>
                         </div>
 
                         <button id="btnComprar" className="btn btn-primary text-uppercase py-3" type="button">Comprar ahora</button>
