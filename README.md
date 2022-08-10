@@ -25,3 +25,5 @@ Se abrirá una pestaña en su navegador y podrá visualizar dicha app.
 
 "localhost/detail/productId" muestra el componente ItemDetailContainer con la información del producto que contenga el id especificado por el parámetro productId
 
+
+![](public/capturaAppBagna.gif)
