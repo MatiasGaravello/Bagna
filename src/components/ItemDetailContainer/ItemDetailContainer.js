@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <h1>Detalle</h1>
+            <h2 className="my-5 text-uppercase">Detalle</h2>
             <ItemDetail {...product} />
         </>
 
