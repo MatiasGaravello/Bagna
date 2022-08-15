@@ -35,7 +35,7 @@ const ItemDetail = (product) => {
                             <label className='text-start'>Talle</label>
                         </div>
                         {
-                            quantity === 0 ? <ItemCount stock={20} onAdd={handleOnAdd} /> : <Link to='/cart' className="btn btn-primary text-uppercase py-3">Finalizar compra</Link>
+                            quantity === 0 ? <ItemCount stock={20} initial={1} onAdd={handleOnAdd} /> : <Link to='/cart' className="btn btn-primary text-uppercase py-3">Finalizar compra</Link>
                         }
                     </div>
                 </div>
