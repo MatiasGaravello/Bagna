@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
-  const handleOnAdd = (quantity) => {
-    console.log(`la cantidad agregada es: ${quantity}`)
-  }
+  // const handleOnAdd = (quantity) => {
+  //   console.log(`la cantidad agregada es: ${quantity}`)
+  // }
 
   return (
     <BrowserRouter>
