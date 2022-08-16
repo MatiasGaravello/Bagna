@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+
     return (
         <nav className='Navbar mx-auto container-fluid'>
             <div className='row m-0'>
