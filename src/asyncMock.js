@@ -58,7 +58,7 @@ const products = [
         listPathImagen: [
             "./images/mochila_beige.png"
         ],
-        descripcion: ""
+        descripcion: " "
     },
     {
         idProducto: 106,
