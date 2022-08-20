@@ -28,8 +28,8 @@ const ItemListContainer = ({ greeting }) => {
 
     if (loading) {
         return (
-            <button class="btn btn-dark mt-5" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <button className="btn btn-dark mt-5" type="button" disabled>
+                <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
             </button>
         )
