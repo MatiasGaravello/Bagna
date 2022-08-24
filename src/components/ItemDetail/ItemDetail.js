@@ -15,7 +15,7 @@ const ItemDetail = ({ idProducto, pathImage1, nombre, precio, descripcion }) => 
 
         setQuantity(quantity)
 
-        const productToAdd = { idProducto, nombre, precio, quantity }
+        const productToAdd = { idProducto, nombre, precio, quantity , pathImage1}
 
         addItem(productToAdd)
     }
