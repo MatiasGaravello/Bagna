@@ -8,10 +8,14 @@ const CartWidget = () => {
 
     const quantity = getQuantity()
 
+    const carritoVacio = quantity === 0
+
+    const onClick = carritoVacio ? (event) => event.preventDefault() : null
+
     return (
-        <Link to='/cart' className={`CartWidget d-flex align-items-center btn border-0 ${quantity === 0 ? 'isDisabled' : ''}`}>
+        <Link to='/cart' className={`CartWidget d-flex align-items-center btn border-0 ${carritoVacio ? 'isDisabled' : ''}`} onClick={onClick}>
             <img src='../images/bag-shopping-solid.svg' alt='CartWidget' />
-            {quantity}
+            {carritoVacio ? '' : quantity}
         </Link>
     )
 }
