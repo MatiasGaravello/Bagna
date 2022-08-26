@@ -63,8 +63,9 @@ const Cart = () => {
                 </div>
             )}
             <h3>Total ${getTotal()}</h3>
-
-
+            <div>
+                <Link to='#' className='btn btn-primary'>Crear Orden</Link>
+            </div>
         </div>
     )
 }
