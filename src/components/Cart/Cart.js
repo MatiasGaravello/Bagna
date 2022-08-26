@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import CartContext from '../../context/CartContext'
 
 const Cart = () => {
@@ -7,11 +8,29 @@ const Cart = () => {
 
     console.log(cart)
 
+    const getTotal = () => {
+        let acc = 0
+
+        cart.forEach(detalleCompra => {
+            acc += detalleCompra.precio * detalleCompra.quantity
+        });
+
+        return acc
+    }
+
     if (cart.length == 0)
-        return <h4 className=''>Carrito vacío</h4>
+        return (
+            <div className='my-5'>
+                <h4 className=''>Carrito vacío</h4>
+                <h5>Visite nuestra tienda</h5>
+                <Link to='/' className='btn btn-secondary'>Productos</Link>
+            </div>)
 
     return (
         <div className='p-4 vstack gap-4 mx-auto w-100' style={{ maxWidth: 950 }}>
+            <div className='d-flex justify-content-end'>
+                <button className='btn btn-primary' onClick={() => clearCart()}>Limpiar Carrito</button>
+            </div>
             {cart.map(cartDetail =>
                 <div key={cartDetail.idProducto} className="border-top border-bottom border-2 p-2">
                     <div className="row g-0">
@@ -43,9 +62,8 @@ const Cart = () => {
                     </div>
                 </div>
             )}
-            <div>
-                <button className='btn btn-primary' onClick={() => clearCart()}>Limpiar Carrito</button>
-            </div>
+            <h3>Total ${getTotal()}</h3>
+
 
         </div>
     )
