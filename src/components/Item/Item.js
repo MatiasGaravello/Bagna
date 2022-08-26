@@ -1,17 +1,20 @@
+import { Link } from 'react-router-dom'
 import './Item.css'
 
 const Item = ({ product }) => {
     return (
-        <li className='py-3'>
-            <div className="CardProduct card">
-                <img src={product.listPathImagen[0]} className="card-img-top img-fluid" alt="..."/>
+        <div className="Item col">
+            <div className="card h-100">
+                <img src={product.pathImage1} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{product.nombre}</h5>
-                    <p className="card-text fs-3 fw-bold">${product.precio}</p>
-                    <button className="btn btn-primary">Ver detalle del producto</button>
+                    <p className="card-text fs-4 fw-semibold">${product.precio}</p>
+                </div>
+                <div className="card-footer bg-transparent">
+                    <Link to={`/detail/${product.idProducto}`} className="btn btn-primary py-2 px-3">Ver detalle</Link>
                 </div>
             </div>
-        </li>
+        </div>
     )
 }
 

@@ -1,3 +1,9 @@
 .CartWidget img {
     width: 16px;
 }
+
+.isDisabled {
+    color: currentColor;
+    opacity: 0.5;
+    text-decoration: none;
+}
