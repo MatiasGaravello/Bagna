@@ -4,19 +4,9 @@ import CartContext from '../../context/CartContext'
 
 const Cart = () => {
 
-    const { cart, removeItem, clearCart } = useContext(CartContext)
+    const { cart, removeItem, clearCart, getTotal } = useContext(CartContext)
 
     console.log(cart)
-
-    const getTotal = () => {
-        let acc = 0
-
-        cart.forEach(detalleCompra => {
-            acc += detalleCompra.precio * detalleCompra.quantity
-        });
-
-        return acc
-    }
 
     if (cart.length == 0)
         return (
@@ -64,7 +54,7 @@ const Cart = () => {
             )}
             <h3>Total ${getTotal()}</h3>
             <div>
-                <Link to='#' className='btn btn-primary'>Crear Orden</Link>
+                <Link to='/checkout' className='btn btn-primary'>Crear Orden</Link>
             </div>
         </div>
     )
