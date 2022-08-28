@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 
 
-const ItemDetail = ({ idProducto, pathImage1, nombre, precio, descripcion }) => {
+const ItemDetail = ({ idProducto, pathImage1, nombre, precio, descripcion, stock }) => {
     const [quantity, setQuantity] = useState(0)
     const { addItem } = useContext(CartContext)
 
@@ -15,7 +15,7 @@ const ItemDetail = ({ idProducto, pathImage1, nombre, precio, descripcion }) => 
 
         setQuantity(quantity)
 
-        const productToAdd = { idProducto, nombre, precio, quantity , pathImage1}
+        const productToAdd = { idProducto, nombre, precio, quantity, pathImage1 }
 
         addItem(productToAdd)
     }
@@ -43,7 +43,7 @@ const ItemDetail = ({ idProducto, pathImage1, nombre, precio, descripcion }) => 
                             <label className='text-start'>Talle</label>
                         </div>
                         {
-                            quantity === 0 ? <ItemCount stock={20} initial={1} onAdd={handleOnAdd} /> : <Link to='/cart' className="btn btn-primary text-uppercase py-3">Finalizar compra</Link>
+                            quantity === 0 ? <ItemCount stock={stock} initial={1} onAdd={handleOnAdd} /> : <Link to='/cart' className="btn btn-primary text-uppercase py-3">Finalizar compra</Link>
                         }
                     </div>
                 </div>

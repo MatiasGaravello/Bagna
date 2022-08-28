@@ -1,4 +1,4 @@
-import { addDoc, collection } from "firebase/firestore"
+import { addDoc, collection, updateDoc, doc } from "firebase/firestore"
 import { db } from "../../services/firebase"
 import { useContext } from "react"
 import CartContext from "../../context/CartContext"
@@ -6,7 +6,7 @@ import CartContext from "../../context/CartContext"
 
 const Checkout = () => {
 
-    const {cart, getQuantity, getTotal} = useContext(CartContext)
+    const { cart, getQuantity, getTotal } = useContext(CartContext)
 
     const totalQuantity = getQuantity()
 
@@ -26,10 +26,10 @@ const Checkout = () => {
             date: new Date()
         }
 
-        const orderRef = collection(db,'orders')
-        addDoc(orderRef, objOrder).then(response =>{
-            console.log(response)
-        })
+        // const orderRef = doc(db, 'products', 'jYA6ZYOUZGuo5DFjjUhN')
+        // updateDoc(orderRef, { stock: 100 }).then(response => {
+        //     console.log(response)
+        // })
     }
 
     return (
