@@ -12,6 +12,14 @@ const Checkout = () => {
 
     const { cart, getQuantity, getTotal, clearCart } = useContext(CartContext)
 
+    const [name, setName] = useState('')
+
+    const [surname, setSurname] = useState('')
+
+    const [address, setAddress] = useState('')
+
+    const [phone, setPhone] = useState('')
+
     const navigate = useNavigate()
 
     const totalQuantity = getQuantity()
@@ -23,11 +31,17 @@ const Checkout = () => {
 
         try {
             const objOrder = {
+                // buyer: {
+                //     firstName: 'Carlos',
+                //     lastName: 'Garavello',
+                //     phone: '2611234566',
+                //     address: 'Liniers 145'
+                // },
                 buyer: {
-                    firstName: 'Carlos',
-                    lastName: 'Garavello',
-                    phone: '2611234566',
-                    address: 'Liniers 145'
+                    firstName: name,
+                    lastName: surname,
+                    phone: phone,
+                    address: address
                 },
                 items: cart,
                 totalQuantity,
@@ -101,6 +115,24 @@ const Checkout = () => {
     return (
         <>
             <h3>Checkout</h3>
+            <form className="d-flex flex-column justify-content-end">
+                <div className="form-floating mb-3">
+                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="form-control" placeholder="name@example.com" />
+                    <label>Nombre</label>
+                </div>
+                <div className="form-floating mb-3">
+                    <input type="text" value={surname} onChange={(e) => setSurname(e.target.value)} className="form-control" placeholder="name@example.com" />
+                    <label>Apellido</label>
+                </div>
+                <div className="form-floating mb-3">
+                    <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} className="form-control" placeholder="name@example.com" />
+                    <label>Teléfono</label>
+                </div>
+                <div className="form-floating mb-3">
+                    <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} className="form-control" placeholder="name@example.com" />
+                    <label>Dirección</label>
+                </div>
+            </form>
             <button onClick={createOrder}>Generar Orden</button>
         </>
     )

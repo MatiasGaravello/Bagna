@@ -25,7 +25,6 @@ function App() {
               <Route path='/cart' element={<Cart />} />
               <Route path='/checkout' element={<Checkout />} />
             </Routes>
-            {/* <ItemCount stock={20} onAdd={handleOnAdd} /> */}
           </main>
         </CartContextProvider>
       </div>
